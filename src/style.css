@@ -1,0 +1,280 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Globální styly */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px 0;
+  z-index: 50;
+}
+
+header .logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+header .nav {
+  display: flex;
+  gap: 20px;
+}
+
+header .nav a {
+  font-size: 16px;
+  color: #4b5563;
+  transition: color 0.3s;
+}
+
+header .nav a:hover {
+  color: #1e3a8a;
+}
+
+.content-padding {
+  padding-top: 80px;
+}
+
+/* Hero */
+.hero {
+  background-color: #eff6ff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin: 20px 0;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cta-button.primary {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background-color: #2563eb;
+}
+
+.cta-button.secondary {
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+.cta-button.secondary:hover {
+  background-color: #d1d5db;
+}
+
+/* Služby */
+.services {
+  padding: 80px 0;
+  background-color: white;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #f9fafb;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.service-card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.service-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+.service-card-description {
+  color: #6b7280;
+  margin: 15px 0;
+}
+
+.service-card-link {
+  color: #1e3a8a;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Kalkulačka */
+.calculator {
+  background-color: #eff6ff;
+  padding: 60px 20px;
+}
+
+.calculator-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.calculator-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.calculator-description {
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+.calculator-form .form-group {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.calculator-footer {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Reference */
+.references {
+  padding: 80px 20px;
+  background-color: white;
+}
+
+.references-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.reference-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.reference-card {
+  background-color: #f9fafb;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reference-quote {
+  font-style: italic;
+  color: #6b7280;
+}
+
+.reference-author {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+/* Kontakt */
+.contact {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 60px 20px;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.contact-description {
+  margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
