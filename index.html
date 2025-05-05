@@ -13,7 +13,9 @@
       <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <!-- Logo -->
         <div class="text-2xl font-bold text-blue-600">
-          <a href="#">CleanStay</a>
+          <a href="#">
+          <img src="public/images/Red Blue Simple Colorful Professional Cleaning Service Logo-2.png" alt="CleanStay Logo" class="h-20">
+          </a>
         </div>
     
         <!-- Mobilní menu ikona -->
@@ -67,7 +69,7 @@
     
         <!-- Úklid domácností -->
         <div class="bg-gray-50 p-6 text-center rounded-2xl shadow hover:shadow-md transition">
-          <img src="public/images/kitchen.avif" alt="Uklid domacnosti" class="mx-auto mb-4 w-full h-48 object-cover">
+          <img src="/images/kitchen.avif" alt="Uklid domacnosti" class="mx-auto mb-4 w-full h-48 object-cover">
           <h3 class="text-xl font-bold text-blue-700 mb-2">Úklid domácností</h3>
           <p class="text-gray-600 mb-4">Běžný, generální, expresní i úklid po rekonstrukci.</p>
           <a href="/uklid-domacnosti" class="text-blue-600 font-medium hover:underline">Více →</a>
@@ -75,7 +77,7 @@
     
         <!-- Úklid firem -->
         <div class="bg-gray-50 p-6 text-center rounded-2xl shadow hover:shadow-md transition">
-          <img src="/public/images/office.avif" alt="Uklid kacelari" class="mx-auto mb-4 w-full h-48 object-cover">
+          <img src="/images/office.avif" alt="Uklid kacelari" class="mx-auto mb-4 w-full h-48 object-cover">
           <h3 class="text-xl font-bold text-blue-700 mb-2">Úklid firemních prostor</h3>
           <p class="text-gray-600 mb-4">Pravidelný úklid kanceláří, obchodů a dalších firemních prostor.</p>
           <a href="/uklid-firem" class="text-blue-600 font-medium hover:underline">Více →</a>
@@ -83,7 +85,7 @@
     
         <!-- Airbnb & hotely -->
         <div class="bg-gray-50 p-6 text-center rounded-2xl shadow hover:shadow-md transition">
-          <img src="/public/images/hotel.avif" alt="Airbnb a hotely" class="mx-auto mb-4 w-full h-48 object-cover">
+          <img src="/images/hotel.avif" alt="Airbnb a hotely" class="mx-auto mb-4 w-full h-48 object-cover">
           <h3 class="text-xl font-bold text-blue-700 mb-2">Airbnb & hotely</h3>
           <p class="text-gray-600 mb-4">Úklid, výměna prádla a kompletní správa vašich nemovitostí.</p>
           <a href="/uklid-airbnb-hotely" class="text-blue-600 font-medium hover:underline">Více →</a>
@@ -95,42 +97,27 @@
     <section id="kalkulacka" class="bg-blue-50 py-16 px-4">
       <div class="max-w-xl mx-auto text-center">
         <h2 class="text-3xl font-semibold text-gray-800 mb-4">Kalkulačka úklidu</h2>
-        <p class="text-gray-600 mb-8">Zadejte parametry a získejte přibližnou cenu úklidu.</p>
     
-        <form class="space-y-4 text-left">
+        <form id="calc-form" class="space-y-4 text-left">
+          <!-- Výběr typu prostoru -->
           <div>
-            <label class="block text-gray-700 mb-1">Typ prostoru</label>
-            <select class="w-full p-3 rounded border border-gray-300">
-              <option>Byt</option>
-              <option>Dům</option>
-              <option>Kancelář</option>
-              <option>Airbnb</option>
+            <label class="block mb-1 font-medium">Typ prostoru</label>
+            <select id="space-type" class="w-full p-3 rounded border border-gray-300">
+              <option value="">-- Vyberte --</option>
+              <option value="byt">Byt / Dům</option>
+              <option value="kancelar">Kancelář</option>
+              <option value="airbnb">Airbnb</option>
             </select>
           </div>
     
-          <div>
-            <label class="block text-gray-700 mb-1">Velikost prostoru (m²)</label>
-            <input type="number" class="w-full p-3 rounded border border-gray-300" placeholder="Např. 60" />
-          </div>
-    
-          <div>
-            <label class="block text-gray-700 mb-1">Frekvence úklidu</label>
-            <select class="w-full p-3 rounded border border-gray-300">
-              <option>Jednorázově</option>
-              <option>Týdně</option>
-              <option>Měsíčně</option>
-            </select>
-          </div>
-    
-          <button type="button" class="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700">Spočítat
-            cenu</button>
-    
-          <div class="text-center text-gray-500 text-sm mt-2">Výpočet je orientační. Pro přesnou nabídku nás kontaktujte.
-          </div>
+          <!-- Dynamické pole -->
+          <div id="dynamic-inputs"></div>
         </form>
+    
+        <div id="result" class="mt-6 text-lg font-semibold text-blue-700 text-center hidden"></div>
       </div>
     </section>
-    
+
     <!-- Reference -->
     <section class="bg-white py-20 px-4">
       <div class="max-w-5xl mx-auto text-center">
