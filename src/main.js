@@ -1,4 +1,4 @@
-import './style.css';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const spaceTypeSelect = document.getElementById('space-type');
