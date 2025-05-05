@@ -1,3 +1,5 @@
+import './style.css';
+
 document.addEventListener('DOMContentLoaded', () => {
   const spaceTypeSelect = document.getElementById('space-type');
   const dynamicInputs = document.getElementById('dynamic-inputs');
