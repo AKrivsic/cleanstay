@@ -1,25 +1,7 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Globální styly */
+/* Základy */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  color: #333;
+  font-family: Arial, sans-serif;
 }
 
 a {
@@ -27,254 +9,246 @@ a {
   color: inherit;
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-header {
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Hlavička */
+.header {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   top: 0;
-  left: 0;
-  padding: 15px 0;
   z-index: 50;
 }
 
-header .logo a {
-  font-size: 24px;
-  font-weight: bold;
-  color: #1e3a8a;
-}
-
-header .nav {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header .nav a {
-  font-size: 16px;
-  color: #4b5563;
-  transition: color 0.3s;
+.logo img {
+  height: 80px;
 }
 
-header .nav a:hover {
-  color: #1e3a8a;
+.mobile-menu-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
-.content-padding {
-  padding-top: 80px;
+.nav-desktop {
+  display: none;
 }
 
-/* Hero */
-.hero {
-  background-color: #eff6ff;
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
   text-align: center;
-  padding: 60px 20px;
 }
 
-.hero-title {
-  font-size: 36px;
+.spacer {
+  padding-top: 100px;
+}
+
+/* Hero sekce */
+.hero {
+  background: #ebf8ff;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+.hero p {
+  color: #4a5568;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons a {
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
   font-weight: bold;
-  color: #333;
+  margin: 0 0.5rem;
 }
 
-.hero-subtitle {
-  font-size: 18px;
-  color: #6b7280;
-  margin: 20px 0;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.cta-button {
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.cta-button.primary {
-  background-color: #1e3a8a;
+.btn-primary {
+  background: #2563eb;
   color: white;
 }
 
-.cta-button.primary:hover {
-  background-color: #2563eb;
-}
-
-.cta-button.secondary {
-  background-color: #e5e7eb;
-  color: #4b5563;
-}
-
-.cta-button.secondary:hover {
-  background-color: #d1d5db;
+.btn-secondary {
+  background: #e2e8f0;
+  color: #2d3748;
 }
 
 /* Služby */
 .services {
-  padding: 80px 0;
-  background-color: white;
+  background: white;
+  padding: 4rem 1rem;
   text-align: center;
 }
 
-.services-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 40px;
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .service-card {
-  background-color: #f9fafb;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s;
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.service-card:hover {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+.service-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
-.service-card-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #1e3a8a;
+.service-card h3 {
+  color: #1d4ed8;
+  margin-bottom: 0.5rem;
 }
 
-.service-card-description {
-  color: #6b7280;
-  margin: 15px 0;
-}
-
-.service-card-link {
-  color: #1e3a8a;
-  font-weight: bold;
-  text-decoration: underline;
+.service-card a {
+  color: #2563eb;
 }
 
 /* Kalkulačka */
 .calculator {
-  background-color: #eff6ff;
-  padding: 60px 20px;
+  background: #ebf8ff;
+  padding: 4rem 1rem;
+  text-align: center;
 }
 
-.calculator-container {
+.calculator-inner {
   max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.calculator select,
+.calculator input,
+.calculator textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.result {
+  margin-top: 1.5rem;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Reference */
+.reference {
+  background: white;
+  padding: 4rem 1rem;
+}
+
+.reference-inner {
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
 
-.calculator-title {
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.calculator-description {
-  color: #6b7280;
-  margin-bottom: 40px;
-}
-
-.calculator-form .form-group {
-  margin-bottom: 20px;
-}
-
-.form-input {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-}
-
-.calculator-footer {
-  color: #6b7280;
-  font-size: 14px;
-  margin-top: 20px;
-}
-
-/* Reference */
-.references {
-  padding: 80px 20px;
-  background-color: white;
-}
-
-.references-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 40px;
-}
-
-.reference-cards {
+.reference-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .reference-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .reference-card {
-  background-color: #f9fafb;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.reference-quote {
-  font-style: italic;
-  color: #6b7280;
-}
-
-.reference-author {
-  margin-top: 10px;
+.reference-card .author {
+  margin-top: 1rem;
+  color: #2563eb;
   font-weight: bold;
-  color: #1e3a8a;
 }
 
 /* Kontakt */
 .contact {
-  background-color: #1e3a8a;
+  background: #2563eb;
   color: white;
-  padding: 60px 20px;
+  padding: 4rem 1rem;
 }
 
-.contact-container {
+.contact-inner {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
 }
 
-.contact-title {
-  font-size: 28px;
+.contact form {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+.contact button {
+  width: 100%;
+  background: white;
+  color: #2563eb;
+  padding: 1rem;
   font-weight: bold;
-}
-
-.contact-description {
-  margin-bottom: 30px;
-}
-
-.contact-form .form-group {
-  margin-bottom: 20px;
+  border-radius: 1rem;
 }
 
 .contact-info {
-  font-size: 14px;
-  margin-top: 40px;
-}
-
-.contact-info p {
-  margin: 5px 0;
+  margin-top: 2rem;
+  font-size: 0.875rem;
 }
