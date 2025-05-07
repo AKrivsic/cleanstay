@@ -1,62 +1,5 @@
-async function loadPartials() {
-  const elements = document.querySelectorAll('[data-include]');
-
-  for (const el of elements) {
-    const url = el.getAttribute('data-include');
-    try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const html = await res.text();
-      el.innerHTML = html;
-    } catch (err) {
-      console.error(`Chyba při načítání ${url}:`, err);
-      el.innerHTML = `<p style="color:red;">Nelze načíst ${url}</p>`;
-    }
-  }
-
-  // Inicializuj burger menu až po načtení všech částí
-  initBurgerMenu();
-}
-
-function initBurgerMenu() {
-  const burgerBtn = document.getElementById('burgerBtn');
-  const menu = document.querySelector('.menu');
-  const closeBtn = menu.querySelector('.menu-close-btn');
-
-  // Otevření / zavření přes burger button
-  burgerBtn.addEventListener('click', () => {
-    menu.classList.toggle('is-open');
-    menu.classList.toggle('is-close');
-  });
-
-  // Zavření přes křížek
-  closeBtn.addEventListener('click', () => {
-    menu.classList.remove('is-open');
-    menu.classList.add('is-close');
-  });
-
-  // Zavření kliknutím mimo wrapper
-  document.addEventListener('click', (e) => {
-    if (
-      menu.classList.contains('is-open') &&                 
-      !e.target.closest('.menu-wrapper') &&                   
-      !e.target.closest('#burgerBtn')                        
-    ) {
-      menu.classList.remove('is-open');
-      menu.classList.add('is-close');
-    }
-  });
-}
-// Zavolej loadPartials a teprve pak inicializuj kalkulačku
-loadPartials().then(initCalculator);
-
-function initCalculator() {
+document.addEventListener('DOMContentLoaded', () => {
   const spaceTypeSelect = document.getElementById('space-type');
-  if (!spaceTypeSelect) {
-    console.warn('Kalkulačka nebyla nalezena v DOMu');
-    return;
-  }
-
   const dynamicInputs = document.getElementById('dynamic-inputs');
   const result = document.getElementById('result');
 
@@ -137,11 +80,9 @@ function initCalculator() {
       `;
     }
 
-    // Posluchače pro nové inputy
     setTimeout(() => {
       const inputs = dynamicInputs.querySelectorAll('select, input');
       inputs.forEach(input => input.addEventListener('input', updatePrice));
     }, 0);
   });
-}
-
+});

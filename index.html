@@ -1,134 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>CleanStay</title>
+  </head>
+  <body>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="stylesheet" href="./src/style.css">
-  <title>CleanStay</title>
-</head>
+    <div data-include="./src/partials/header.html"></div>
 
-<body>
-  <header class="header">
-    <div class="container header-inner">
+  <main>
+    
+    <div class="spacer"></div>
+
+    <div data-include="./src/partials/hero.html"></div>
+    <div data-include="./src/partials/services.html"></div>
+    <div data-include="./src/partials/calc.html"></div>
+    <div data-include="./src/partials/ref.html"></div>
+    <div data-include="./src/partials/contact.html"></div> 
+
+  </main>
+<div class="menu is-close">
+  <div class="menu-wrapper">
+    <div class="menu-header-content">
       <div class="logo">
-        <a href="#"><img src="src/images/Red Blue Simple Colorful Professional Cleaning Service Logo-2.png"
-            alt="CleanStay Logo"></a>
+        <a href="#"><img src="/src/images/logocleanstay.webp" alt="CleanStay Logo"></a>
       </div>
-      <div class="mobile-menu-icon">
-        <button id="mobile-menu-button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
-      <nav class="nav-desktop">
-        <a href="#sluzby">Služby</a>
-        <a href="#kalkulacka">Kalkulačka</a>
-        <a href="#reference">Reference</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-      <nav id="mobile-menu" class="nav-mobile">
-        <a href="#sluzby">Služby</a>
-        <a href="#kalkulacka">Kalkulačka</a>
-        <a href="#reference">Reference</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
+      <button class="menu-close-btn" aria-label="Zavřít menu">&times;</button>
     </div>
-  </header>
 
-  <div class="spacer"></div>
-
-  <section class="hero">
-    <h1>Profesionální úklid domácností, kanceláří i Airbnb</h1>
-    <p>Rychle. Spolehlivě. Za férové ceny.</p>
-    <div class="hero-buttons">
-      <a href="#kalkulacka" class="btn-primary">Spočítejte si úklid</a>
-      <a href="#kontakt" class="btn-secondary">Kontaktujte nás</a>
-    </div>
-  </section>
-
-  <section class="services">
-    <h2>Naše služby</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <img src="src/images/kitchen.avif" alt="Úklid domácností">
-        <h3>Úklid domácností</h3>
-        <p>Běžný, generální, expresní i úklid po rekonstrukci.</p>
-        <a href="/uklid-domacnosti">Více →</a>
-      </div>
-      <div class="service-card">
-        <img src="src/images/office-2.avif" alt="Úklid kanceláří">
-        <h3>Úklid firemních prostor</h3>
-        <p>Pravidelný úklid kanceláří, obchodů a dalších firemních prostor.</p>
-        <a href="/uklid-firem">Více →</a>
-      </div>
-      <div class="service-card">
-        <img src="src/images/hotel.avif" alt="Airbnb a hotely">
-        <h3>Airbnb & hotely</h3>
-        <p>Úklid, výměna prádla a kompletní správa vašich nemovitostí.</p>
-        <a href="/uklid-airbnb-hotely">Více →</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="kalkulacka" class="calculator">
-    <div class="calculator-inner">
-      <h2>Kalkulačka úklidu</h2>
-      <form id="calc-form">
-        <label>Typ prostoru
-          <select id="space-type">
-            <option value="">-- Vyberte --</option>
-            <option value="byt">Byt / Dům</option>
-            <option value="kancelar">Kancelář</option>
-            <option value="airbnb">Airbnb</option>
-          </select>
-        </label>
-        <div id="dynamic-inputs"></div>
-      </form>
-      <div id="result" class="result hidden"></div>
-    </div>
-  </section>
-
-  <section class="reference">
-    <div class="reference-inner">
-      <h2>Co říkají naši zákazníci</h2>
-      <div class="reference-grid">
-        <div class="reference-card">
-          <p>„Skvělý servis! Úklid proběhl rychle a naprosto profesionálně. Doporučuji.“</p>
-          <p class="author">– Jana K., Praha</p>
-        </div>
-        <div class="reference-card">
-          <p>„Moje Airbnb je díky nim vždy připravené. Nemusím nic řešit.“</p>
-          <p class="author">– Tomáš B., Praha</p>
-        </div>
-        <div class="reference-card">
-          <p>„Úklid po rekonstrukci zvládli bez problémů. Skvělá domluva.“</p>
-          <p class="author">– Petra N., Praha</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="kontakt" class="contact">
-    <div class="contact-inner">
-      <h2>Kontaktujte nás</h2>
-      <p>Rádi vám připravíme nezávaznou nabídku nebo zodpovíme jakékoliv dotazy.</p>
-      <form>
-        <label>Jméno <input type="text" required /></label>
-        <label>E-mail <input type="email" required /></label>
-        <label>Zpráva <textarea rows="4" required></textarea></label>
-        <button type="submit">Odeslat zprávu</button>
-      </form>
-      <div class="contact-info">
-        <p>📞 +420 776 292 312 &nbsp; | &nbsp; ✉️ info@cleanstay.cz</p>
-        <p>IČO: 01719408 &nbsp; | &nbsp; Otevřeno: Non-Stop</p>
-      </div>
-    </div>
-  </section>
-
+    <nav class="menu-nav">
+      <ul class="menu-nav-list">
+        <li class="menu-nav-item">
+          <a class="menu-nav-link" href="/uklid-domacnosti.html">Domácnost</a>
+        </li>
+        <li class="menu-nav-item">
+          <a class="menu-nav-link" href="/uklid-firem.html">Pro firmy</a>
+        </li>
+        <li class="menu-nav-item">
+          <a class="menu-nav-link" href="/airbnb.html">Airbnb</a>
+        </li>
+        <li class="menu-nav-item">
+          <a class="menu-nav-link" href="/cenik.html">Ceník</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="menu-order-link" href="#kontakt" data-link-order="">Objednát</a>
+  </div>
+  <!-- <ul class="social-list menu-social-list">
+        <li class="social-item">
+            <a class="social-link" href="https://www.instagram.com/goitclub/" target="_blank">Instagram</a>
+        </li>
+        <li class="social-item">
+            <a class="social-link" href="https://www.facebook.com/goITclub/" target="_blank">Facebook</a>
+        </li>
+        <li class="social-item">
+            <a class="social-link" href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+                target="_blank">Linkedin</a>
+        </li>
+        <li class="social-item">
+            <a class="social-link" href="https://github.com/Vyacheslav-Chop/project-persistent-portfolio"
+                target="_blank">GitHub</a>
+        </li>
+    </ul> -->
+</div>
   <script type="module" src="./src/main.js"></script>
-</body>
-
+  </body>
 </html>
