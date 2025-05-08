@@ -23,6 +23,16 @@
     margin: 0 8px;
 }
 
+.hero-buttons {
+    display: flex;
+}
+
+@media screen and (min-width: 768px) {
+    .hero-buttons {
+        display: block;
+    }
+}
+
 .btn-primary {
     background: #8B5CF6;
     color: white;

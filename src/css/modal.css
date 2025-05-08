@@ -8,11 +8,17 @@
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
-    /* background-image: url('/img/modal-imgs/decor-mobile-menu.webp'); */
+    background: #f0f0f0;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .menu {
+        display: none;
+    }
 }
 
 .menu.is-open {
@@ -36,11 +42,16 @@
 }
 
 .menu-close-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 50px;
     border: none;
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    color: #8B5CF6;
 }
 
 .menu-close-btn-icon {
@@ -55,24 +66,35 @@
     flex: 1;
 }
 
-.menu-order-link {
+.menu-nav {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 12px 24px;
-    font-weight: 500;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    border-radius: 8px;
-    color: #f0f0f0;
-    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+    gap: 16px;
+}
+
+.menu-order-link {
+    display: block;
+        padding: 12px 24px;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        background-color: #34D399;
+        color: #ffffff;
 }
 
 .menu-nav-link {
     display: block;
-    font-weight: 300;
+    font-weight: bold;
+    /* font-weight: 300; */
     letter-spacing: 0.03em;
     padding: 10px 0;
+    color: #8B5CF6;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
