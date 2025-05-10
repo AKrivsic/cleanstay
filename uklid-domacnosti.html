@@ -4,54 +4,65 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <title>Úklid domácnosti | CleanStay</title>
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body>
 
-<header class="header">
-    <div class="container header-inner">
-        <div class="logo">
-            <a href="#"><img src="src/images/Red Blue Simple Colorful Professional Cleaning Service Logo-2.png"
-                    alt="CleanStay Logo"></a>
-        </div>
-        <div class="mobile-menu-icon">
-            <button id="mobile-menu-button">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
-        <nav class="nav-desktop">
-            <a href="#sluzby">Služby</a>
-            <a href="#kalkulacka">Kalkulačka</a>
-            <a href="#reference">Reference</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
-        <nav id="mobile-menu" class="nav-mobile">
-            <a href="#sluzby">Služby</a>
-            <a href="#kalkulacka">Kalkulačka</a>
-            <a href="#reference">Reference</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
-    </div>
+<!-- <header class="header"> -->
+
+<div data-include="./src/partials/header.html"></div>
+
 </header>
+<div class="spacer"></div>
 
     <main class="main-content">
-        <h1>Úklid domácnosti</h1>
-        <p>Nabízíme profesionální úklid domácností všeho druhu:</p>
-
+        <section class="hero section">
+        <h1>Úklid domácnosti Praha</h1>
+    
+        <p>Hledáte spolehlivý a kvalitní <strong>úklid domácnosti v Praze</strong>? Jsme CleanStay – úklidová firma, která
+            vám pomůže udržet váš domov čistý a voňavý bez zbytečného stresu. Naše profesionální uklízečky přizpůsobí úklid
+            vašim požadavkům a harmonogramu.</p>
+            </section>
+    
+        <h2 class="title title-home">Co zahrnuje náš domácí úklid?</h2>
         <ul>
-            <li>Běžný pravidelný úklid</li>
-            <li>Generální úklid</li>
-            <li>Expresní úklid</li>
-            <li>Úklid po rekonstrukci</li>
+            <li>Vytírání podlah, vysávání koberců a čalounění</li>
+            <li>Úklid kuchyně – včetně spotřebičů</li>
+            <li>Čištění koupelny a WC</li>
+            <li>Utírání prachu, leštění zrcadel a skleněných ploch</li>
+            <li>Mytí oken (na přání)</li>
         </ul>
-
-        <a href="/kalkulacka.html" class="btn">Spočítat cenu</a>
+    
+        <h2 class="title title-home">Proč právě CleanStay?</h2>
+        <ul>
+            <li>Flexibilní termíny (včetně víkendů)</li>
+            <li>Pečlivý výběr a školení uklízeček</li>
+            <li>Možnost pravidelného i jednorázového úklidu</li>
+            <li>Transparentní ceny – žádné skryté poplatky</li>
+            <li>Recenze od spokojených klientů v celé Praze</li>
+        </ul>
+    
+        <h2 class="title title-home">Úklidové služby pro všechny městské části Prahy</h2>
+        <p>Poskytujeme <strong>úklid domácností po celé Praze</strong> – Praha 1 až Praha 10 i přilehlé oblasti. Ať už
+            bydlíte na Vinohradech, na Smíchově nebo v Letňanech, rádi za vámi přijedeme.</p>
+    
+        <h2 class ="title title-home">Nezávazná poptávka</h2>
+        <p>Vyzkoušejte si náš profesionální přístup. Objednejte si <strong>úklid domácnosti v Praze</strong> snadno a
+            rychle. Stačí vyplnit <a href="#kontakt" class="btn">kontaktní formulář</a> nebo nám zavolat.</p>
+    
+        <a href="/#kalkulacka" class="btn">Spočítejte si cenu úklidu</a>
     </main>
-
+    
+    <div data-include="./src/partials/modal.html"></div>
+    <div data-include="./src/partials/footer.html"></div>
+    </body>
+    
+    </html>
+    </main>
+    <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>

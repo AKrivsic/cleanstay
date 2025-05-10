@@ -10,51 +10,84 @@
 
 <body>
 
-<header class="header">
-    <div class="container header-inner">
-        <div class="logo">
-            <a href="#"><img src="src/images/Red Blue Simple Colorful Professional Cleaning Service Logo-2.png"
-                    alt="CleanStay Logo"></a>
-        </div>
-        <div class="mobile-menu-icon">
-            <button id="mobile-menu-button">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
-        <nav class="nav-desktop">
-            <a href="#sluzby">Služby</a>
-            <a href="#kalkulacka">Kalkulačka</a>
-            <a href="#reference">Reference</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
-        <nav id="mobile-menu" class="nav-mobile">
-            <a href="#sluzby">Služby</a>
-            <a href="#kalkulacka">Kalkulačka</a>
-            <a href="#reference">Reference</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
-    </div>
+<!-- <header class="header"> -->
+<div data-include="./src/partials/header.html"></div>
 </header>
-
+<div class="spacer"></div>
     <main class="main-content">
-        <h1>Úklid firemních prostor</h1>
+    <section class="hero section">
+        <div class="container">
+            <h1>Profesionální úklid firem a SVJ v Praze</h1>
+            <p>
+                Nabízíme komplexní a pravidelný úklid kanceláří, komerčních prostor a společných částí bytových domů (SVJ) v
+                Praze. Naše služby přizpůsobíme přesně vašim požadavkům – ať už potřebujete denní, týdenní nebo jednorázový
+                úklid.
+            </p>
+        </div>
+    </section>
+    
+    <section class="services">
+        <div class="container">
+            <h2 class="title">Co zahrnuje úklid pro firmy</h2>
+            <ul>
+                <li>Vysávání a vytírání podlah</li>
+                <li>Úklid kuchyňky, lednice, mikrovlnky</li>
+                <li>Úklid a dezinfekce toalet</li>
+                <li>Vynášení odpadků a výměna pytlů</li>
+                <li>Otírání prachu z nábytku, parapetů a techniky</li>
+                <li>Leštění skleněných ploch</li>
+            </ul>
+    
+            <h2 class="title">Úklid společných prostor pro SVJ</h2>
+            <ul>
+                <li>Úklid vstupních hal, chodeb a schodišť</li>
+                <li>Čištění výtahů, madel a klik</li>
+                <li>Utírání poštovních schránek a zábradlí</li>
+                <li>Vynášení domovního odpadu</li>
+                <li>Sezónní úklid (např. mytí oken, úklid po malování)</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="hero">
+        <div class="container">
+            <h2 class="title">Proč si vybrat CleanStay?</h2>
+            <ul>
+                <li>Pravidelnost a spolehlivost – přijedeme vždy včas</li>
+                <li>Diskrétní a proškolený personál</li>
+                <li>Čistící prostředky i techniku zajistíme my</li>
+                <li>Férová cena a žádné skryté poplatky</li>
+                <li>Působíme výhradně v Praze a okolí</li>
+            </ul>
+            <a href="#kontakt" class="btn">Nezávazná poptávka</a>
+        </div>
+    </section>
+    
+    <section class="reference">
+        <div class="reference-inner">
+            <h2 class="title">Zkušenosti našich klientů</h2>
+            <div class="reference-grid">
+                <div class="reference-card">
+                    <p>"Máme kanceláře na Praze 4 a CleanStay se o úklid stará už přes rok. Maximální spokojenost!"</p>
+                    <p class="author">— Jan K., Office Manager</p>
+                </div>
+                <div class="reference-card">
+                    <p>"Úklid společných prostor v domě probíhá pravidelně a kvalitně. Doporučuji!"</p>
+                    <p class="author">— Petra S., SVJ Praha 3</p>
+                </div>
+                <div class="reference-card">
+                    <p>"Spolupráce je bezproblémová, paní uklízečky jsou milé a pečlivé. Jsme velmi spokojeni."</p>
+                    <p class="author">— Eva L., bytové družstvo Praha 6</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
-        <p>Zajistíme pravidelný nebo jednorázový úklid kanceláří, provozoven i administrativních budov.</p>
-
-        <ul>
-            <li>Denní nebo týdenní servis dle dohody</li>
-            <li>Vysávání, vytírání, mytí stolů a kuchyňky</li>
-            <li>Dezinfekce dotykových ploch</li>
-            <li>Výměna odpadků, úklid WC</li>
-        </ul>
-
-        <p>Jsme flexibilní – přizpůsobíme se vašemu provozu a časovým požadavkům.</p>
-
-        <a href="/kalkulacka.html" class="btn">Spočítat cenu</a>
     </main>
-
+    <div data-include="./src/partials/modal.html"></div>
+    <div data-include="./src/partials/footer.html"></div>
+<script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
