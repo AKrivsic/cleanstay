@@ -223,3 +223,50 @@
     padding-left: 0;
         margin-bottom: 20px;
 }
+
+.menu-social-list {
+    display: flex;
+    gap: 25px;
+    margin: 0 auto
+}
+
+.social-link {
+    display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 50px;
+        /* Zaoblení tlačítka */
+        color: white;
+        /* Text bílý */
+        font-size: 16px;
+        text-decoration: none;
+        /* Odstraní podtržení */
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        /* Plynulý přechod */
+}
+
+.social-link.instagram {
+    background-color: #E4405F;
+    /* Barva Instagram */
+}
+
+.social-link.instagram:hover {
+    background-color: #C13584;
+    /* Tmavší odstín pro hover efekt */
+    transform: scale(1.05);
+    /* Jemné zvětšení při hoveru */
+}
+
+/* Facebook tlačítko */
+.social-link.facebook {
+    background-color: #3b5998;
+    /* Barva Facebook */
+}
+
+.social-link.facebook:hover {
+    background-color: #2d4373;
+    /* Tmavší odstín pro hover efekt */
+    transform: scale(1.05);
+    /* Jemné zvětšení při hoveru */
+}
