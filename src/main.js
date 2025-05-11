@@ -1,4 +1,4 @@
-import './css/style.css';
+// import './css/style.css';
 import { initBurgerMenu } from './js/burgerMenu.js';
 import { initCalculator } from './js/calculator.js';
 
