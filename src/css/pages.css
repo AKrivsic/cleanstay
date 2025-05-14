@@ -20,12 +20,6 @@
     text-align: center;
 }
 
-/* @media (min-width: 768px) {
-    .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-} */
-
 @media only screen and (min-width: 1280px) {
     .services-grid {
         flex-direction: row;
@@ -48,25 +42,6 @@
     align-items: center;
     text-align: center;
 }
-
-/* @media (min-width: 768px) {
-    .service-card {
-        max-width: 768px;
-    }
-} */
-
-/* @media only screen and (min-width: 1280px) {
-    .service-card {
-            background: #f9fafb;
-            padding: 24px;
-            border-radius: 16px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-    }
-} */
 
 .service-card img {
     width: auto;
@@ -121,8 +96,6 @@ label {
     margin-bottom: 6px;
     font-weight: 500;
 }
-
-
 
 .hidden {
     display: none;
@@ -250,24 +223,6 @@ body {
     padding: 40px;
 }
 
-/* h1.home {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #1a73e8;
-    border-left: 6px solid #1a73e8;
-    padding-left: 15px;
-} */
-
-/* .title {
-    font-size: 24px;
-    color: #222;
-    margin-top: 40px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #1a73e8;
-    display: inline-block;
-    padding-bottom: 5px;
-} */
-
 a.btn {
     display: inline-block;
     margin-top: 20px;
@@ -290,12 +245,6 @@ footer.contact {
     margin-top: 60px;
 }
 
-.contact-inner {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-}
-
 .contact-inner h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -313,6 +262,3 @@ footer.contact {
 .contact-info a:hover {
     text-decoration: none;
 }
-/* --- index.css --- */
-
-/* --- uklid-firem.css --- */
